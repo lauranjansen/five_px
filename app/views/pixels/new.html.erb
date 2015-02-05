@@ -1,0 +1,10 @@
+<%= form_for @pixel do |frm| %>
+	<div class="show_pixel">
+		<%= frm.label :width %>
+		<%= frm.number_field :width %>
+		<%= frm.label :height %>
+		<%= frm.number_field :height %>
+		<%= frm.label :color %>
+		<%= frm.text_field :color %>
+		<%= frm.submit "Save" %>
+<% end %>

@@ -5,3 +5,29 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Pixel.create!(
+	:width => 20,
+	:height => 20,
+	:color => "#264FB2"
+)
+Pixel.create!(
+	:width => 20,
+	:height => 20,
+	:color => "#FF402C"
+)
+Pixel.create!(
+	:width => 20,
+	:height => 20,
+	:color => "#68FFD2"
+)
+Pixel.create!(
+	:width => 20,
+	:height => 20,
+	:color => "#A2CC38"
+)
+Pixel.create!(
+	:width => 20,
+	:height => 20,
+	:color => "#FFBE35"
+)
