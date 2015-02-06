@@ -1,17 +1,19 @@
-<div style="display:none"><h1>5 Whole Pixels</h1></div>
-<div class="background" style="margin:0px">
+<div>
 	<% count = 0 %>
-	<% until count > 2000 do %>
-		<% @pixels.each do |pixel| %>
-			<%= link_to(pixel
-				#, method: :delete
-			) do %>
-			<div class="pixel" style="width:<%= pixel.width %>px; height:<%= pixel.height %>px; background-color:<%= pixel.color %>;float:left"></div>
+	<% if @pixels.count > 0 %>
+		<% until count > 2000 do %>
+			<% @pixels.each do |pixel| %>
+				<%= link_to(pixel, method: :delete
+				) do %>
+				<div class="pixel" style="width:<%= pixel.width %>px; height:<%= pixel.height %>px; background-color:<%= pixel.color %>"></div>
+				<% end %>
+				<% count += 1 %>
 			<% end %>
-			<% count += 1 %>
 		<% end %>
+	<% else %>
+		<h1>No pixels! Click the button to add one!</h1>
 	<% end %>
 	<%= link_to "/pixels/new" do %>
-		<div class="add">+</div>
+		<div class="add"><i class="fa fa-plus"></i></div>
 	<% end %>
 </div>
