@@ -21,8 +21,10 @@ class PixelsController < ApplicationController
 	end
 
 	def destroy
-		@pixel = Pixel.find(params[:id])
-		@pixel.destroy
+		if Pixel.all.count > 3
+			@pixel = Pixel.find(params[:id])
+			@pixel.destroy
+		end
 		redirect_to pixels_url
 	end
 
